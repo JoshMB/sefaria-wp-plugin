@@ -1,20 +1,62 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather:300,400,400italic,300italic|Open+Sans:400,300,300italic,400italic,600italic,600,700,800&subset=latin,latin-ext);
 
 @font-face {
-    font-family: 'Alef Hebrew';
-	src: url('../fonts/Alef-Regular.eot'); 
-	src: url('../fonts/Alef-Regular.eot?#iefix') format("embedded-opentype"), 
-		url('../fonts/Alef-Regular.woff') format("woff"), 
-		url('../fonts/Alef-Regular.ttf') format("truetype"), 
-		url('../fonts/Alef-Regular.svg') format("svg");
-    unicode-range: U+0590-05FF;
+	font-family: 'Taamey Frank CLM';
+	src: url('../fonts/TaameyFrankCLM-Bold.eot');
+	src: local('Taamey Frank CLM Bold'), local('TaameyFrankCLM-Bold'),
+		url('../fonts/TaameyFrankCLM-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/TaameyFrankCLM-Bold.woff2') format('woff2'),
+		url('../fonts/TaameyFrankCLM-Bold.woff') format('woff'),
+		url('../fonts/TaameyFrankCLM-Bold.ttf') format('truetype'),
+		url('../fonts/TaameyFrankCLM-Bold.svg#TaameyFrankCLM-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Taamey Frank CLM';
+	src: url('../fonts/TaameyFrankCLM-Medium.eot');
+	src: local('Taamey Frank CLM Medium'), local('TaameyFrankCLM-Medium'),
+		url('../fonts/TaameyFrankCLM-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/TaameyFrankCLM-Medium.woff2') format('woff2'),
+		url('../fonts/TaameyFrankCLM-Medium.woff') format('woff'),
+		url('../fonts/TaameyFrankCLM-Medium.ttf') format('truetype'),
+		url('../fonts/TaameyFrankCLM-Medium.svg#TaameyFrankCLM-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Taamey Frank CLM';
+	src: url('../fonts/TaameyFrankCLM-MediumOblique.eot');
+	src: local('Taamey Frank CLM MediumOblique'), local('TaameyFrankCLM-MediumOblique'),
+		url('../fonts/TaameyFrankCLM-MediumOblique.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/TaameyFrankCLM-MediumOblique.woff2') format('woff2'),
+		url('../fonts/TaameyFrankCLM-MediumOblique.woff') format('woff'),
+		url('../fonts/TaameyFrankCLM-MediumOblique.ttf') format('truetype'),
+		url('../fonts/TaameyFrankCLM-MediumOblique.svg#TaameyFrankCLM-MediumOblique') format('svg');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Taamey Frank CLM';
+	src: url('../fonts/TaameyFrankCLM-Bold-Oblique.eot');
+	src: local('Taamey Frank CLM BoldOblique'), local('TaameyFrankCLM-Bold-Oblique'),
+		url('../fonts/TaameyFrankCLM-Bold-Oblique.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/TaameyFrankCLM-Bold-Oblique.woff2') format('woff2'),
+		url('../fonts/TaameyFrankCLM-Bold-Oblique.woff') format('woff'),
+		url('../fonts/TaameyFrankCLM-Bold-Oblique.ttf') format('truetype'),
+		url('../fonts/TaameyFrankCLM-Bold-Oblique.svg#TaameyFrankCLM-Bold-Oblique') format('svg');
+	font-weight: bold;
+	font-style: italic;
 }
 
 blockquote.textual,
 .entry-content blockquote.textual {
-	border: 0 solid #789459;
-	border-left-width: 0px;
-	color: #58436c;
+	border: 0 solid #212e50;
+	border-width: 0px;
+	color: #212e50;
 	line-height: 1.3;
 	margin: 9px 10% 21px 10% !important;
 	padding: 0px 0px 0px 0px;
@@ -24,16 +66,23 @@ blockquote.textual,
 
 blockquote.textual .text-english {
 	display: block;
-	font-size: 98%;
+	font-size: 100%;
 	font-style: normal;
-/* 	line-height: 1.2; */
+	font-weight: 300;
+	text-transform: none;
+	font-family: Merriweather, Georgia, serif;
+	line-height: 1.4;
 }
 
 blockquote.textual .hebrew-text {
+	font-family: 'Taamey Frank CLM', 'Times New Roman', serif;
+	font-size: 120%;
+	font-weight: 500;
 	display: block;
 	padding-bottom: 10px;
 	margin-top:12px;
 	font-style: normal;
+	line-height:1.6;
 
 }
 
@@ -50,25 +99,31 @@ blockquote em.translit {
 }
 
 blockquote cite.text-source {
-	font-size: 15px;
-	font-family: Merriweather, Georgia, serif;
-	font-style: normal;
+	color: #999;
+	display: inline-block;
+	font-family: proxima-nova, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 14px;
+	height: auto;
+	letter-spacing: 1px;
+	line-height: 21px;
 	text-align: center;
-	display: block;
-	letter-spacing: -.15px;
-	color: #789459;
-/* 	border-top: 1px solid rgba(120, 148, 89, 0.5);	 */
+	visibility: visible;
+	width: auto;
+	display: inline-block;
+	font-weight: 300;
 }
 
 blockquote cite.text-source a.sefaria-ref {
-	font-size: 15px;
-	font-family: Merriweather, Georgia, serif;
-	font-style: normal;
+	color: #999;
+	display: inline-block;
+	font-family: proxima-nova, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 14px;
+	height: auto;
+	letter-spacing: 1px;
+	line-height: 21px;
 	text-align: center;
-	display: block;
-	letter-spacing: -.15px;
-	color: #789459;
-	font-weight: 300;
+	visibility: visible;
+	width: auto;
 	display: inline-block;
 }
 
