@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,400,400italic,300italic|Open+Sans:400,300,300italic,400italic,600italic,600,700,800&subset=latin,latin-ext);
+
+@font-face {
+    font-family: 'Alef Hebrew';
+	src: url('../fonts/Alef-Regular.eot'); 
+	src: url('../fonts/Alef-Regular.eot?#iefix') format("embedded-opentype"), 
+		url('../fonts/Alef-Regular.woff') format("woff"), 
+		url('../fonts/Alef-Regular.ttf') format("truetype"), 
+		url('../fonts/Alef-Regular.svg') format("svg");
+    unicode-range: U+0590-05FF;
+}
+
+blockquote.textual,
+.entry-content blockquote.textual {
+	border: 0 solid #789459;
+	border-left-width: 0px;
+	color: #58436c;
+	line-height: 1.3;
+	margin: 9px 10% 21px 10% !important;
+	padding: 0px 0px 0px 0px;
+	width: 80% !important;
+	text-align: center;
+}
+
+blockquote.textual .text-english {
+	display: block;
+	font-size: 98%;
+	font-style: normal;
+/* 	line-height: 1.2; */
+}
+
+blockquote.textual .hebrew-text {
+	display: block;
+	padding-bottom: 10px;
+	margin-top:12px;
+	font-style: normal;
+
+}
+
+blockquote em.translit {
+	font-weight: 300;
+	text-transform: none;
+	font-family: Merriweather, Georgia, serif;
+	font-size: 17px;
+	font-style: italic;
+	color: rgba(88, 67, 108, 0.8);
+	padding-bottom: 4px;
+	margin-bottom: 3px;
+	line-height:1.6;
+}
+
+blockquote cite.text-source {
+	font-size: 15px;
+	font-family: Merriweather, Georgia, serif;
+	font-style: normal;
+	text-align: center;
+	display: block;
+	letter-spacing: -.15px;
+	color: #789459;
+/* 	border-top: 1px solid rgba(120, 148, 89, 0.5);	 */
+}
+
+blockquote cite.text-source a.sefaria-ref {
+	font-size: 15px;
+	font-family: Merriweather, Georgia, serif;
+	font-style: normal;
+	text-align: center;
+	display: block;
+	letter-spacing: -.15px;
+	color: #789459;
+	font-weight: 300;
+	display: inline-block;
+}
+
+blockquote cite.text-source a.sefaria-ref:hover {
+	color: #58436c;
+	text-decoration: none;
+	box-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
+	border-bottom: 1px dotted rgba(153, 130, 174, 0.7);
+	font-weight: 300;
+}
+
+blockquote cite.text-source:before,
+blockquote cite.text-source:after {
+/* 	content: '\2014'; */
+	content: '';
+	display: inline-block;
+	margin:0px 4px;
+	color: rgba(120, 148, 89, 0.85);
+}

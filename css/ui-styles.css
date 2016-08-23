@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'sef-text';
+  src:  url('../fonts/sef-text.eot?55rrv8');
+  src:  url('../fonts/sef-text.eot?55rrv8#iefix') format('embedded-opentype'),
+    url('../fonts/sef-text.ttf?55rrv8') format('truetype'),
+    url('../fonts/sef-text.woff?55rrv8') format('woff'),
+    url('../fonts/sef-text.svg?55rrv8#sef-text') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'sef-text' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-torah:before {
+  content: "\e900";
+}
+.icon-sefaria:before {
+  content: "\e901";
+}
+
+
+.wp-media-buttons span.icon-sefaria {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: text-top;
+    margin: 0 2px;
+}
+
+.wp-media-buttons #sefaria_button span.icon-sefaria {
+    background: 0 0
+}
+
+.wp-media-buttons #sefaria_button span.icon-sefaria:before {
+  font: 400 18px / 1 'sef-text';
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e901";
+}
