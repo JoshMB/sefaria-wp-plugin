@@ -4,7 +4,7 @@
  * Plugin URI: http;//sefaria.org
  * Description: Insert text from the Sefaria database.
  * Version: 1.0
- * Author: Russel Neiss (with Josh Mason-Barkin)
+ * Author: Josh Mason-Barkin
  * Author URI: http://sefaria.org
  */
 
@@ -65,7 +65,7 @@ add_action('admin_footer','my_shortcode_media_button_popup');
 //Generate inline content for the popup window when the "my shortcode" button is clicked
 function my_shortcode_media_button_popup(){?>
   <div id="my_shortcode_popup" style="display:none;">
-    <--".wrap" class div is needed to make thickbox content look good-->
+    <!--".wrap" class div is needed to make thickbox content look good-->
     <div class="wrap">
       <div>
         <h2>Enter a Text Reference</h2>
@@ -92,14 +92,9 @@ jQuery('#id_of_button_clicked ').on('click',function(){
 jQuery.ajax({
     url: getStr,
  
-    // The name of the callback parameter, as specified by the YQL service
-    //jsonp: "callback",
- 
     // Tell jQuery we're expecting JSONP
     dataType: "jsonp",
- 
-    // Tell YQL what we want and that we want JSON
- 
+
     // Work with the response
     success: function( response ) {
         var shortcode = '<blockquote class="textual"><span class="hebrew-text">'+response.he+'</span> <span class="text-english">'+response.text+'</span><cite class="text-source">'+response.ref+ ' </cite></blockquote>';
