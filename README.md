@@ -9,5 +9,5 @@ A WordPress plugin for inserting text from the Sefaria database into the post ed
 3. Once installed, click "Activate" to activate the plugin.
 
 ##Usage
-1. To use the plugin, select any post, page, or custom post type to edit. (Or create a new one.) On the edit screen, you'll have a button labeled "Add Text", right next to the add media button.![text-button](/readme-images/text-button.png)
+1. <img src="/readme-images/text-button.png" style="float:right;border:1px solid #999;margin: 0px 0px 10px 20px;">To use the plugin, select any post, page, or custom post type to edit. (Or create a new one.) On the edit screen, you'll have a button labeled "Add Text", right next to the add media button.
 
