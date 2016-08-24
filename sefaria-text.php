@@ -98,9 +98,16 @@ jQuery.ajax({
     // Work with the response
     success: function( response ) {
         var shortcode = '<blockquote class="textual"><span class="hebrew-text">'+response.he+'</span> <span class="text-english">'+response.text+'</span><cite class="text-source">'+response.ref+' </cite></blockquote>';
+        
+        var $edit = $("#edit");
+
+		var curValue = $edit.val();
+
+		var newValue = curValue + shortcode;
+
           
           if( !tinyMCE.activeEditor || tinyMCE.activeEditor.isHidden()) {
-            jQuery('textarea#content').val(shortcode);
+            jQuery('textarea#content').val(newValue);
           } else {
             tinyMCE.execCommand('mceInsertContent', false, shortcode);
           }
