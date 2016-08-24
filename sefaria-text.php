@@ -100,7 +100,8 @@ jQuery.ajax({
         var shortcode = '<blockquote class="textual"><span class="hebrew-text">'+response.he+'</span> <span class="text-english">'+response.text+'</span><cite class="text-source">'+response.ref+' </cite></blockquote>';
           
           if( !tinyMCE.activeEditor || tinyMCE.activeEditor.isHidden()) {
-            jQuery('textarea#content').val(shortcode);
+			var currentText = jQuery('textarea#content').val();
+			jQuery('textarea#content').val(currentText+" "+shortcode);
           } else {
             tinyMCE.execCommand('mceInsertContent', false, shortcode);
           }
