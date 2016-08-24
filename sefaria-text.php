@@ -107,9 +107,10 @@ jQuery.ajax({
           }
           //close the thickbox after adding shortcode to editor
           self.parent.tb_remove();
-
-		
-    }
+    },
+    error: function (xhr, string, thrownError) {
+        alert('Error. Usually this is due to an unknown reference');
+      }
 });
       
   
