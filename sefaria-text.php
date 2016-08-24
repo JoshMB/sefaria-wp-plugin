@@ -97,7 +97,7 @@ jQuery.ajax({
 
     // Work with the response
     success: function( response ) {
-        var shortcode = '<blockquote class="textual"><span class="hebrew-text">'+response.he+'</span> <span class="text-english">'+response.text+'</span><cite class="text-source">'+response.ref+' </cite></blockquote>';
+        var shortcode = '<blockquote class="textual"><span class="hebrew-text">'+response.he+'</span> <span class="text-english">'+response.text+'</span><cite class="text-source">'+response.ref+'</cite></blockquote> <span>&nbsp;</span>';
           
           if( !tinyMCE.activeEditor || tinyMCE.activeEditor.isHidden()) {
 			var currentText = jQuery('textarea#content').val();
@@ -108,6 +108,7 @@ jQuery.ajax({
           //close the thickbox after adding shortcode to editor
           self.parent.tb_remove();
 
+		
     }
 });
       
