@@ -76,7 +76,7 @@ blockquote.textual .text-english {
 
 blockquote.textual .hebrew-text {
 	font-family: 'Taamey Frank CLM', 'Times New Roman', serif;
-	font-size: 120%;
+	font-size: 125%;
 	font-weight: 500;
 	display: block;
 	padding-bottom: 10px;
@@ -99,26 +99,16 @@ blockquote em.translit {
 	line-height:1.6;
 }
 
-blockquote cite.text-source {
-	color: #999;
-	display: inline-block;
-	font-family: proxima-nova, 'Helvetica Neue', Helvetica, sans-serif;
-	font-size: 14px;
-	height: auto;
-	letter-spacing: 1px;
-	line-height: 21px;
-	text-align: center;
-	visibility: visible;
-	width: auto;
-	display: inline-block;
-	font-weight: 300;
+blockquote cite:before {
+	content: "" !important;
 }
 
+blockquote cite.text-source,
 blockquote cite.text-source a.sefaria-ref {
 	color: #999;
 	display: inline-block;
 	font-family: proxima-nova, 'Helvetica Neue', Helvetica, sans-serif;
-	font-size: 14px;
+	font-size: 85%;
 	height: auto;
 	letter-spacing: 1px;
 	line-height: 21px;
@@ -126,21 +116,14 @@ blockquote cite.text-source a.sefaria-ref {
 	visibility: visible;
 	width: auto;
 	display: inline-block;
+	padding-bottom: 2px;
+	font-weight: 300;
 }
 
 blockquote cite.text-source a.sefaria-ref:hover {
 	color: #58436c;
 	text-decoration: none;
 	box-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
-	border-bottom: 1px dotted rgba(153, 130, 174, 0.7);
+	border-bottom: 1px dotted #f9f9f7;
 	font-weight: 300;
-}
-
-blockquote cite.text-source:before,
-blockquote cite.text-source:after {
-/* 	content: '\2014'; */
-	content: '';
-	display: inline-block;
-	margin:0px 4px;
-	color: rgba(120, 148, 89, 0.85);
 }
