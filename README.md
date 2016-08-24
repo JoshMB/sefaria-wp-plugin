@@ -1,6 +1,8 @@
 # Sefaria Text Insert
 A WordPress plugin for inserting text from the Sefaria database into the post editor.
 
+![powered-by-sefaria](/readme-images/powered_by_sefaria_badge_182.png)
+
 **Note:** This plugin is a work-in-progress. Though we don't think it does anything that could mess-up your site, please know that you're installing it at your own risk.
 
 ##Installation
