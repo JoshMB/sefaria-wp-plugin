@@ -69,7 +69,7 @@ function my_shortcode_media_button_popup(){?>
     <div class="wrap">
       <div>
         <h2>Enter a Text Reference</h2>
-        <p>For example: <strong>Ex. 12:2-8</strong> or <strong>Sanhedrin 4b</strong>.<br/><a href="https://github.com/Sefaria/Sefaria-Project/wiki/Text-References" target="_blank">Read more about text references. (Opens in new tab/window.)</a></p>
+        <p>For example: <strong>Ex. 12:2-8</strong> or <strong>Sanhedrin 4b</strong>.</p><p><a href="https://github.com/Sefaria/Sefaria-Project/wiki/Text-References" target="_blank">Read more about text references. (Opens in new tab/window.)</a></p>
         <div class="my_shortcode_add">
           <input type="text" id="id_of_textbox_user_typed_in"><button class="button-primary" id="id_of_button_clicked">Add Source</button>
         </div>
@@ -97,7 +97,7 @@ jQuery.ajax({
 
     // Work with the response
     success: function( response ) {
-        var shortcode = '<blockquote class="textual"><span class="hebrew-text">'+response.he+'</span> <span class="text-english">'+response.text+'</span><cite class="text-source">'+response.ref+ ' </cite></blockquote>';
+        var shortcode = '<blockquote class="textual"><span class="hebrew-text">'+response.he+'</span> <span class="text-english">'+response.text+'</span><cite class="text-source">'+response.ref+' </cite></blockquote>';
           
           if( !tinyMCE.activeEditor || tinyMCE.activeEditor.isHidden()) {
             jQuery('textarea#content').val(shortcode);
