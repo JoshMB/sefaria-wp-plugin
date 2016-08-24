@@ -83,6 +83,7 @@ blockquote.textual .hebrew-text {
 	margin-top:12px;
 	font-style: normal;
 	line-height:1.6;
+	direction: rtl;
 
 }
 
