@@ -13,6 +13,6 @@ A WordPress plugin for inserting text from the Sefaria database into the post ed
 ##Usage
 1. To use the plugin, select any post, page, or custom post type to edit. (Or create a new one.) On the edit screen, you'll have a button labeled "Add Text", right next to the add media button.<br/><br/>![button](/readme-images/text-button.png)
 
-2. Click the button to open the dialogue box. In the field, type/paste a text reference, and then click "Add Source."<br/>![text-ref](/readme-images/enter-text-ref.png)<br/> 
+2. Click the button to open the dialogue box. In the field, type/paste a text reference, and then click "Add Source."<br/><br/>![text-ref](/readme-images/enter-text-ref.png)<br/> 
 
 
