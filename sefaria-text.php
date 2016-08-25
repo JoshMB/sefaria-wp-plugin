@@ -8,6 +8,52 @@
  * Author URI: http://sefaria.org
  */
 
+//Create Settings Page
+add_action('admin_menu', 'sef_text_settings_menu');
+
+function sef_text_settings_menu() {
+	add_options_page('Sefaria Text Insert - Settings', 'Sefaria Insert', 'manage_options', 'sef_text_settings', 'sef_text_settings_page');
+}
+
+add_action( 'admin_init', 'sef_text_settings' );
+
+//Register the Settings
+function sef_text_settings() {
+	register_setting( 'sef_text_settings', 'sef_hebrew_color' );
+	register_setting( 'sef_text_settings', 'sef_english_color' );
+	register_setting( 'sef_text_settings', 'sef_source_color' );
+}
+
+//Setup the Page Itself
+function sef_text_settings_page() {
+?>
+<div class="wrap">
+<h2>Sefaria Text Insert - Settings</h2>
+
+<form method="post" action="options.php">
+    <?php settings_fields( 'sef_text_settings' ); ?>
+    <?php do_settings_sections( 'sef_text_settings' ); ?>
+    <table class="form-table">        
+        <tr valign="top">
+        <th scope="row">Hebrew Color</th>
+        <td><input type="text" name="sef_hebrew_color" value="<?php echo esc_attr( get_option('sef_hebrew_color') ); ?>" /></td>
+        </tr>
+		<tr valign="top">
+        <th scope="row">English Color</th>
+        <td><input type="text" name="sef_english_color" value="<?php echo esc_attr( get_option('sef_english_color') ); ?>" /></td>
+        </tr>
+		<tr valign="top">
+        <th scope="row">Source Citation Color</th>
+        <td><input type="text" name="sef_source_color" value="<?php echo esc_attr( get_option('sef_source_color') ); ?>" /></td>
+        </tr>
+    </table>
+    <?php submit_button(); ?>
+</form>
+</div>
+
+<?php
+}
+
 //Load CSS for Backend
 add_action( 'admin_print_styles', 'go_to_the_head' );
 function go_to_the_head() {
@@ -97,7 +143,10 @@ jQuery.ajax({
 
     // Work with the response
     success: function( response ) {
-        var shortcode = '<blockquote class="textual"><span class="hebrew-text">'+response.he+'</span> <span class="text-english">'+response.text+'</span><cite class="text-source">'+response.ref+'</cite></blockquote> <span>&nbsp;</span>';
+        var hebcolor = fromPHP(<?php echo json_encode(get_option('sef_hebrew_color')); ?>);
+        var engcolor = fromPHP(<?php echo json_encode(get_option('sef_english_color')); ?>);
+        var sourcecolor = fromPHP(<?php echo json_encode(get_option('sef_source_color')); ?>);
+        var shortcode = '<blockquote class="textual"><span class="hebrew-text" style="color:'+hebcolor+';">'+response.he+'</span> <span class="text-english" style="color:'+engcolor+';">'+response.text+'</span><cite class="text-source" style="color:'+sourcecolor+';">'+response.ref+'</cite></blockquote> <span>&nbsp;</span>';
           
           if( !tinyMCE.activeEditor || tinyMCE.activeEditor.isHidden()) {
 			var currentText = jQuery('textarea#content').val();
